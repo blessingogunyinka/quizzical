@@ -34,6 +34,7 @@ body {
   background-color: #4D5B9E ;
   color: white ; 
   text-align: center ; 
+  cursor: pointer ;
 }
 
 .blob-yellow {
@@ -70,39 +71,32 @@ hr {
   border: 1px solid #DBDEF0 ;
   width: 100% ; 
   margin-left: 0px ;
-
 }
 
 
-.answer-btn {
+.answer-btn, .answer-btn-clicked  {
   border: 0.79px solid ;
-  border-color: #4D5B9E ;
-  border-radius: 13px; 
-  /* background-color: #F5F7FB ; */
-  background-color: transparent ;  
-  color: #293264 ;  
-  width: fit-content ; 
-  height: 37px ;
-  font-size: 20px ;
-  margin-right: 20px;
-  padding-left: 20px; 
-  padding-right: 20px ;
-  margin-top: 7px  ;  
-}
-
-.answer-btn-clicked {
-  border: 0.79px solid ; 
-  border-color: #D6DBF5 ;
-  border-radius: 13px; 
-  background-color: #D6DBF5 ;   
+  border-radius: 13px ; 
   color: #293264 ;  
   width: fit-content ;
   height: 37px ;
   font-size: 20px ;
-  margin-right: 20px;
-  padding-left: 20px; 
+  margin-right: 20px ;
+  padding-left: 20px ; 
   padding-right: 20px ;
-  margin-top: 7px  ;
+  margin-top: 7px ;
+  cursor: pointer ;
+}
+
+.answer-btn {
+  border-color: #4D5B9E ;
+  background-color: transparent ;  
+}
+
+.answer-btn-clicked {
+  border-color: #D6DBF5 ;
+  background-color: #D6DBF5 ;   
+  transition: 0.1s ;
 }
 
 
@@ -122,6 +116,7 @@ hr {
   text-align: center ;
   margin-top: 40px ;
   margin-bottom: 55px ;  
+  cursor: pointer ;
 }
 
 .invalid-selections {
@@ -134,53 +129,36 @@ hr {
   margin: 0px ;     
 }
 
-.answer-btn-correct {
-  border: 0.79px solid ; 
-  border-color: #94D7A2 ;
-  border-radius: 13px; 
-  background-color: #94D7A2 ;   
-  color: #293264 ;  
+.answer-btn-unselected, .answer-btn-correct, .answer-btn-incorrect {
+  border: 0.79px solid ;
+  border-radius: 13px ;
+  color: #293264 ;
   width: fit-content ;
   height: 37px ;
   font-size: 20px ;
-  margin-right: 20px;
-  padding-left: 20px; 
+  margin-right: 20px ;
+  padding-left: 20px ;
   padding-right: 20px ;
   margin-top: 7px  ;
-}
-
-.answer-btn-incorrect {
-  border: 0.79px solid ; 
-  border-color: #F8BCBC ;
-  border-radius: 13px; 
-  background-color: #F8BCBC ;   
-  color: #293264 ;  
-  width: fit-content ;
-  height: 37px ;
-  font-size: 20px ;
-  margin-right: 20px;
-  padding-left: 20px; 
-  padding-right: 20px ;
-  margin-top: 7px  ;
-  opacity: 50% ;
 }
 
 .answer-btn-unselected {
-  border: 0.79px solid ;
   border-color: #4D5B9E ;
-  border-radius: 13px; 
-  /* background-color: #F5F7FB ; */
   background-color: transparent ;  
-  color: #293264 ;  
-  width: fit-content ; 
-  height: 37px ;
-  font-size: 20px ;
-  margin-right: 20px;
-  padding-left: 20px; 
-  padding-right: 20px ;
-  margin-top: 7px  ; 
   opacity: 50% ;
 }
+
+.answer-btn-correct {
+  border-color: #94D7A2 ;
+  background-color: #94D7A2 ;   
+}
+
+.answer-btn-incorrect {
+  border-color: #F8BCBC ;
+  background-color: #F8BCBC ;   
+  opacity: 50% ;
+}
+
 
 .play-again-btn-container {
   display: flex ; 
@@ -198,6 +176,7 @@ hr {
   text-align: center ;
   margin-top: 40px ;
   margin-bottom: 55px ;  
+  cursor: pointer ;
 }
 
 .play-again-btn-container p {

@@ -32,11 +32,15 @@ export default function Question(props) {
                 <button 
                     className={item.isSelected ? "answer-btn-clicked" : "answer-btn"} 
                     onClick={ () => props.selectAnswer(qn, ans) }
-                >{item.answer}</button>
+                >
+                    {item.answer}
+                </button>
                 :
                 <button 
                     className={getNewButtonClassName()} 
-                >{item.answer}</button>
+                >
+                    {item.answer}
+                </button>
             }
             </>
         )
